@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Padaria Sabor Real · Parque Nanci, Maricá</title>
+<style>
+  /* CORES: troque aqui para mudar o visual do site inteiro */
+  :root {
+    --fundo: #fff8ef;
+    --superficie: #ffffff;
+    --texto: #3b2417;
+    --suave: #7a5c49;
+    --destaque: #b5651d;
+    --destaque-texto: #ffffff;
+    --borda: #ecd9c3;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --fundo: #1e1510; --superficie: #2a1d15; --texto: #f6e9da;
+      --suave: #c9ad94; --destaque: #e08a3c; --destaque-texto: #1e1510;
+      --borda: #44311f; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --fundo: #1e1510; --superficie: #2a1d15; --texto: #f6e9da;
+    --suave: #c9ad94; --destaque: #e08a3c; --destaque-texto: #1e1510;
+    --borda: #44311f; color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--fundo); color: var(--texto);
+    font-family: Georgia, "Times New Roman", serif; line-height: 1.6;
+  }
+  h1, h2, h3 { line-height: 1.2; margin: 0 0 .5rem; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 1.25rem; }
+  section { padding: 3rem 0; }
+  .botao {
+    display: inline-block; background: var(--destaque); color: var(--destaque-texto);
+    padding: .8rem 1.4rem; border-radius: 999px; text-decoration: none;
+    font-family: system-ui, sans-serif; font-weight: 600;
+  }
+  .botao.claro { background: transparent; color: var(--texto); border: 2px solid var(--borda); }
+
+  /* TOPO */
+  header.topo { padding: 4rem 0 3rem; text-align: center; border-bottom: 1px solid var(--borda); }
+  .selo { font-family: system-ui, sans-serif; font-size: .85rem; letter-spacing: .12em;
+          text-transform: uppercase; color: var(--destaque); }
+  header h1 { font-size: clamp(2.2rem, 7vw, 3.6rem); }
+  header p { color: var(--suave); max-width: 34rem; margin: .5rem auto 1.5rem; font-size: 1.15rem; }
+  .acoes { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; }
+  .servicos { margin-top: 1.5rem; font-family: system-ui, sans-serif; font-size: .9rem; color: var(--suave); }
+
+  /* CARDÁPIO */
+  .grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .card { background: var(--superficie); border: 1px solid var(--borda); border-radius: 14px; padding: 1.2rem; }
+  .card .emoji { font-size: 1.8rem; }
+  .card p { margin: .25rem 0 0; color: var(--suave); font-size: .95rem; }
+
+  /* INFORMAÇÕES */
+  .info { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+  .info .card h3 { font-size: 1.05rem; }
+  .info a { color: var(--destaque); }
+
+  footer { text-align: center; padding: 2rem 0 3rem; color: var(--suave);
+           font-family: system-ui, sans-serif; font-size: .85rem; border-top: 1px solid var(--borda); }
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="wrap">
+    <div class="selo">Parque Nanci · Maricá</div>
+    <h1>Padaria Sabor Real</h1>
+    <p>Café da manhã farto, pães fresquinhos e aquele cafezinho para começar bem o dia.</p>
+    <div class="acoes">
+      <a class="botao" href="https://wa.me/5521969804905" target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+      <a class="botao claro" href="#cardapio">Ver o cardápio</a>
+    </div>
+    <div class="servicos">Refeição no local · Retirada na porta · Entrega</div>
+  </div>
+</header>
+
+<section id="cardapio">
+  <div class="wrap">
+    <h2>Nosso cardápio</h2>
+    <p style="color:var(--suave)">Alguns dos nossos destaques. Passe aqui e conheça todas as opções do balcão.</p>
+    <div class="grade">
+      <!-- Para adicionar um item, copie um bloco "card" inteiro e mude o texto -->
+      <div class="card"><div class="emoji">☕</div><h3>Café carioca</h3><p>Cafezinho coado na hora, perfeito para acompanhar o pão.</p></div>
+      <div class="card"><div class="emoji">🥖</div><h3>Pão australiano</h3><p>Um dos queridinhos dos nossos clientes.</p></div>
+      <div class="card"><div class="emoji">🍳</div><h3>Pão com ovo</h3><p>Clássico do café da manhã, quentinho e bem recheado.</p></div>
+      <div class="card"><div class="emoji">🍰</div><h3>Bolos</h3><p>Opções variadas para o lanche da tarde ou para presentear.</p></div>
+      <div class="card"><div class="emoji">🥐</div><h3>Salgados</h3><p>Assados e fritos, para matar a fome a qualquer hora.</p></div>
+      <div class="card"><div class="emoji">🍽️</div><h3>Café da manhã</h3><p>Grande variedade de itens para montar o seu.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre" style="background:var(--superficie);border-top:1px solid var(--borda);border-bottom:1px solid var(--borda)">
+  <div class="wrap">
+    <h2>Sobre a padaria</h2>
+    <p>A Padaria Sabor Real fica no Parque Nanci, em Maricá, e é um lugar tranquilo para tomar café, fazer uma refeição ou levar o pão para casa. Você pode comer aqui, retirar na porta ou pedir entrega.</p>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="wrap">
+    <h2>Venha nos visitar</h2>
+    <div class="info" style="margin-top:1.25rem">
+      <div class="card">
+        <h3>📍 Endereço</h3>
+        <p>Rua das Orquídeas<br>Parque Nanci, Maricá - RJ<br>CEP 24913-275</p>
+      </div>
+      <div class="card">
+        <h3>🕕 Horário</h3>
+        <p>Segunda a sábado: 06h às 21h<br>Domingo: 06h às 13h</p>
+      </div>
+      <div class="card">
+        <h3>📞 Contato</h3>
+        <p><a href="tel:+5521969804905">(21) 96980-4905</a><br>
+        <a href="https://wa.me/5521969804905" target="_blank" rel="noopener">Chamar no WhatsApp</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© Padaria Sabor Real · Parque Nanci, Maricá - RJ</div>
+</footer>
+
+</body>
+</html>
